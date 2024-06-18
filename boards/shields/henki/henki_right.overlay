@@ -1,4 +1,4 @@
-#include "hEnki.dtsi" // Notice that the main dtsi files are included in the overlay.
+#include "henki.dtsi" // Notice that the main dtsi files are included in the overlay.
 
 &default_transform { // The matrix transform for this board is 5 columns over because the left half is 5 columns wide according to the matrix.
     col-offset = <5>;
