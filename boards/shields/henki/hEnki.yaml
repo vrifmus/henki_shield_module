@@ -1,0 +1,11 @@
+file_format: "1"
+id: henki
+name: hEnki
+type: shield
+url: https://github.com/vrifmus/henki_shield_module
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - henki_left
+  - henki_right

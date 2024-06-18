@@ -1,0 +1,5 @@
+config SHIELD_HENKI_LEFT
+    def_bool $(shields_list_contains,henki_left)
+
+config SHIELD_HENKI_RIGHT
+    def_bool $(shields_list_contains,henki_right)
