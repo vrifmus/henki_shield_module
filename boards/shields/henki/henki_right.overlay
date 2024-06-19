@@ -12,10 +12,4 @@
         , <&pro_micro 8 GPIO_ACTIVE_HIGH> // col9 in the schematic
         , <&pro_micro 9 GPIO_ACTIVE_HIGH>  // col10 in the schematic
         ;
-    row-gpios
-        = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row A from the schematic file
-        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row B from the schematic file
-        , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row C from the schematic file
-        , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row D from the schematic file
-        ;
 };
