@@ -62,21 +62,21 @@
 
     combos {
         compatible = "zmk,combos";
-        // game
-        COMBO(game,               &tog 6,            0 32,        0 6)
-        // nav
-        COMBO(nav_taskv,          TASK_V,            1  3,        2)
-        // num
-        COMBO(num_space_l,        &kp SPACE,        12 13,        1)
-        COMBO(num_dot_l,          &kp DOT,          11 13,        1)
-        COMBO(num_comma_l,        &kp COMMA,        10 13,        1)
-        COMBO(num_space_r,        &kp SPACE,        16 17,        1)
-        COMBO(num_dot_r,          &kp DOT,          16 18,        1)
-        COMBO(num_comma_r,        &kp COMMA,        16 19,        1)
-        // main
+            // main
         COMBO(enter,              &kp RET,          12 13,        0)
-        COMBO(backspace,          &kp BSPC,         11 13,        0)
-        COMBO(delete,             &kp DEL,          10 13,        0)
+        COMBO(backspace,          &kp BSPC,         11 12,        0)
+        COMBO(delete,             &kp DEL,          11 13,        0)
+            // game
+        COMBO(game,               &tog 6,            0 32,        0 6)
+            // num
+        COMBO(num_space_l,        &kp SPACE,        12 13,        1)
+        COMBO(num_dot_l,          &kp DOT,          11 12,        1)
+        COMBO(num_comma_l,        &kp COMMA,        11 13,        1)
+        COMBO(num_space_r,        &kp SPACE,        16 17,        1)
+        COMBO(num_dot_r,          &kp DOT,          17 18,        1)
+        COMBO(num_comma_r,        &kp COMMA,        16 18,        1)
+            // nav
+        COMBO(nav_taskv,          TASK_V,            1  3,        2)
     };
 
     keymap {
