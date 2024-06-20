@@ -62,17 +62,21 @@
 
     combos {
         compatible = "zmk,combos";
-        COMBO(game,               &tog 6,            0 32,        0 6)
+        // main
         COMBO(enter,              &kp RET,          12 13,        0)
         COMBO(backspace,          &kp BSPC,         11 13,        0)
         COMBO(delete,             &kp DEL,          10 13,        0)
+        // num
         COMBO(num_space_l,        &kp SPACE,        12 13,        1)
         COMBO(num_dot_l,          &kp DOT,          11 13,        1)
         COMBO(num_comma_l,        &kp COMMA,        10 13,        1)
         COMBO(num_space_r,        &kp SPACE,        16 17,        1)
         COMBO(num_dot_r,          &kp DOT,          16 18,        1)
         COMBO(num_comma_r,        &kp COMMA,        16 19,        1)
+        // nav
         COMBO(nav_taskv,          TASK_V,            1  3,        2)
+        // game
+        COMBO(game,               &tog 6,            0 32,        0 6)
     };
 
     keymap {
@@ -101,14 +105,14 @@
             bindings = <
         // ToDo: Add "space" combo 5+6
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ,       │  7       │  8       │  9       │          │   │          │  7       │  8       │  9       │          │
-            &kp COMMA  &kp N7     &kp N8     &kp N9     &trans         &trans     &kp N7     &kp N8     &kp N9     &trans
+        //│          │  7       │  8       │  9       │          │   │          │  7       │  8       │  9       │          │
+            &trans     &kp N7     &kp N8     &kp N9     &trans         &trans     &kp N7     &kp N8     &kp N9     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  0       │  4       │  5       │  6       │  "_"     │   │  "_"     │  4       │  5       │  6       │  0       │
-            &kp N0     &kp N4     &kp N5     &kp N6     &kp SPACE      &kp SPACE  &kp N4     &kp N5     &kp N6     &kp N0
+        //│  0       │  4       │  5       │  6       │          │   │          │  4       │  5       │  6       │  0       │
+            &kp N0     &kp N4     &kp N5     &kp N6     &trans         &trans     &kp N4     &kp N5     &kp N6     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  .       │  1       │  2       │  3       │ NLCK     │   │          │  1       │  2       │  3       │          │
-            &kp DOT    &kp N1     &kp N2     &kp N3     &kp KP_NLCK    &trans     &kp N1     &kp N2     &kp N3     &trans
+        //│          │  1       │  2       │  3       │ NLCK     │   │          │  1       │  2       │  3       │          │
+            &trans     &kp N1     &kp N2     &kp N3     &kp KP_NLCK    &trans     &kp N1     &kp N2     &kp N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &trans     &trans     &trans         &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
