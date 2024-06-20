@@ -31,8 +31,8 @@
             quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
         };
-        tt: thumbrow_tap {
-            label = "thumbrow_tap";
+        tt: thumb_hold_tap {
+            label = "thumb_hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -62,13 +62,17 @@
 
     combos {
         compatible = "zmk,combos";
-        COMBO(delete,        &kp DEL,        10 11,     0)
-        COMBO(backspace,    &kp BSPC,        11 12,     0)
-        COMBO(enter,         &kp RET,        12 13,     0)
-        COMBO(fn,              &mo 4,        31 32,     0)
-        COMBO(game,           &tog 6,         0 32,     0 6)
-        COMBO(nav_taskv,      TASK_V,         1  3,     2)
-        COMBO(game_escape,   &kp ESC,        20 32,     6)
+        COMBO(game,              &tog 6,         0 32,     0 6)
+        COMBO(enter,            &kp RET,        12 13,     0)
+        COMBO(backspace,       &kp BSPC,        11 13,     0)
+        COMBO(delete,           &kp DEL,        10 13,     0)
+        COMBO(num_space_l,     &kp SPACE,       12 13,     1)
+        COMBO(num_dot_l,         &kp DOT,       11 13,     1)
+        COMBO(num_comma_l,       &kp DOT,       10 13,     1)
+        COMBO(num_space_r,     &kp SPACE,       16 17,     1)
+        COMBO(num_dot_r,         &kp DOT,       16 18,     1)
+        COMBO(num_comma_r,       &kp DOT,       16 19,     1)
+        COMBO(nav_taskv,         TASK_V,         1  3,     2)
     };
 
     keymap {
@@ -87,7 +91,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp ESC    &tt 1 TAB  &tt 2 SPACE    &tt 3 ENTER &tt 4 BSPC  &kp DEL
+                                  &tt 4 ESC &tt 1 TAB  &tt 2 SPACE    &tt 3 RET  &tt 4 BSPC  &kp DEL
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
